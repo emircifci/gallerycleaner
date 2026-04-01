@@ -1,0 +1,60 @@
+<!-- index.html - Uygulama Tanıtım Sayfası -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Cleaner | Galerinizi Kaydırarak Temizleyin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0b10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --primary-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg-dark); color: var(--text-primary); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        nav { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(10, 11, 16, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--card-border); }
+        .logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; background: var(--primary-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; }
+        .hero { padding: 10rem 0 5rem; text-align: center; position: relative; }
+        .hero-glow { position: absolute; top: -10rem; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(79, 172, 254, 0.15) 0%, transparent 70%); z-index: -1; }
+        h1 { font-family: 'Outfit', sans-serif; font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -2px; }
+        .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem; }
+        .btn { display: inline-block; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s; background: var(--primary-gradient); color: #000; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(79, 172, 254, 0.4); }
+        .features { padding: 5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--card-border); padding: 2.5rem; border-radius: 24px; backdrop-filter: blur(5px); }
+        .feature-card h3 { font-family: 'Outfit', sans-serif; margin-bottom: 1rem; font-size: 1.5rem; }
+        footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--card-border); margin-top: 5rem; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; margin: 0 1rem; font-size: 0.85rem; }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <nav><div class="container" style="display: flex; justify-content: space-between;"><div class="logo">GalleryCleaner</div><div class="nav-links"><a href="#features">Özellikler</a><a href="privacy.html">Gizlilik</a><a href="terms.html">Koşullar</a></div></div></nav>
+    <main class="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <h1>Galerini <span style="color: #4facfe;">kaydırarak</span> temizle</h1>
+            <p>Telefonunda yer açmanın en şık yolu. Sağa kaydır sakla, sola kaydır sil. Fotoğraflarını saniyeler içinde düzenle.</p>
+            <a href="https://apps.apple.com/app/id6761444641" class="btn">App Store'dan İndir</a>
+            <div style="margin-top: 5rem;">
+                <img src="assets/mockup.png" alt="App Preview" style="width: 100%; max-width: 800px; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.5); transform: perspective(2000px) rotateX(10deg);">
+            </div>
+        </div>
+    </main>
+    <section id="features" class="container">
+        <div class="features">
+            <div class="feature-card"><h3>👆 Kaydır-Sil</h3><p>Tinder benzeri bir deneyimle fotoğraflarınızı zahmetsizce düzenleyin.</p></div>
+            <div class="feature-card"><h3>🔍 Benzerleri Bul</h3><p>Birbirinin aynısı olan kareleri otomatik olarak belirleyin ve silin.</p></div>
+            <div class="feature-card"><h3>🛡️ Gizli ve Güvenli</h3><p>Tüm işlemler cihazınızda gerçekleşir. Fotoğraflarınız asla telefonunuzdan çıkmaz.</p></div>
+        </div>
+    </section>
+    <footer><div class="container"><p>&copy; 2024 GalleryCleaner. Tüm hakları saklıdır.</p><div class="footer-links"><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html">Kullanım Koşulları</a></div></div></footer>
+</body>
+</html>
